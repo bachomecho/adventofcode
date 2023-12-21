@@ -1,6 +1,6 @@
-# --- Day 14: Parabolic Reflector Dish ---
+# --- Day 14: Parabolic Reflector Dish Part 1---
 
-example = False # change this flag to switch input files
+example = True # change this flag to switch input files
 input_file = ""
 if example: input_file = "example_input.txt"
 else: input_file = "main_input.txt"
@@ -16,19 +16,15 @@ for x in range(len(input[0])):
 
 result = 0
 for l in col_list:
-    pressure = 0
     pressure_score = len(l)
     new_col = "".join(l).split("#")
     for y in new_col:
         other_elems = 0
-        if not y:
-            pressure_score -= 1
-            continue
-        for idx, char in enumerate(y):
+        if not y: pressure_score -= 1; continue
+        for char in y:
             if char == "O":
-                pressure += pressure_score
+                result += pressure_score
                 pressure_score -= 1
             else: other_elems += 1
         pressure_score -= other_elems + 1
-    result += pressure
 print(result)
