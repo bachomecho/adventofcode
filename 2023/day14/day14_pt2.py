@@ -1,11 +1,13 @@
 # --- Day 14: Parabolic Reflector Dish Part 2---
 # reminder: every user has a distinct input given to them by advent of code
 """
-this is a bit of a brute force solution that actually does not yield a result we can use due to the recursion limit, it only goes up to 248 cycles where we would need 1000000000
+this is a bit of a brute force solution that actually does not yield a result we can use due to the recursion limit,
+it only goes up to 248 cycles where we would need 1000000000
 
 After 3 cycles it yields the same matrix given in the example, so I am going to carefully assume the logic is generally correct
 
-Theoretically, if we were to reach 1000000000 cycles and yield a matrix, the logic from part 1 could be applied on that matrix and we would get the correct result
+Theoretically, if we were to reach 1000000000 cycles and yield a matrix,
+the logic from part 1 could be applied on that matrix and we would get the correct result
 
 Maybe I will come back to this later, now time for Christmas!
 """
